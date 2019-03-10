@@ -1,0 +1,85 @@
+package io.nirozjung.bike.models;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+public class Bike {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id; 
+	private String name; 
+	private String email;
+	private String phone; 
+	private String model; 
+	private String serial_Number; 
+	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yy")
+	private BigDecimal purchase_Price; 
+	private Date purchase_Date; 
+	private boolean contact;
+	
+	public Long getId() {
+		return this.id;
+	}
+	public void setId(Long aId) {
+		id = aId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String aName) {
+		name = aName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String aEmail) {
+		email = aEmail;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String aPhone) {
+		phone = aPhone;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String aModel) {
+		model = aModel;
+	}
+	public String getSerialNumber() {
+		return serialNumber;
+	}
+	public void setSerialNumber(String aSerialNumber) {
+		serialNumber = aSerialNumber;
+	}
+	public BigDecimal getPurchasePrice() {
+		return purchasePrice;
+	}
+	public void setPurchasePrice(BigDecimal aPurchasePrice) {
+		purchasePrice = aPurchasePrice;
+	}
+	public Date getPurchaseDate() {
+		return purchaseDate;
+	}
+	public void setPurchaseDate(Date aPurchaseDate) {
+		purchaseDate = aPurchaseDate;
+	}
+	public boolean isContact() {
+		return contact;
+	}
+	public void setContact(boolean aContact) {
+		contact = aContact;
+	} 	
+}

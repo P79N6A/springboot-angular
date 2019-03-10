@@ -1,0 +1,5 @@
+package io.nirozjung.bike.models;
+
+public class Bike {
+
+}

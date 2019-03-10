@@ -1,0 +1,7 @@
+package io.nirozjung.bike.controller;
+
+@RestController
+@RequestMapping("/api/v1/bikes")
+public class BikeController {
+
+}

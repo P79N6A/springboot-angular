@@ -1,0 +1,66 @@
+package io.nirozjung.bike.models;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+public class Bike {
+	private String fName; 
+	private String fEmail;
+	private String fPhone; 
+	private String fModel; 
+	private String fSerialNumber; 
+	private BigDecimal fPurchasePrice; 
+	private Date fPurchaseDate; 
+	private boolean fContact;
+	public String getName() {
+		return fName;
+	}
+	public void setName(String aName) {
+		fName = aName;
+	}
+	public String getEmail() {
+		return fEmail;
+	}
+	public void setEmail(String aEmail) {
+		fEmail = aEmail;
+	}
+	public String getPhone() {
+		return fPhone;
+	}
+	public void setPhone(String aPhone) {
+		fPhone = aPhone;
+	}
+	public String getModel() {
+		return fModel;
+	}
+	public void setModel(String aModel) {
+		fModel = aModel;
+	}
+	public String getSerialNumber() {
+		return fSerialNumber;
+	}
+	public void setSerialNumber(String aSerialNumber) {
+		fSerialNumber = aSerialNumber;
+	}
+	public BigDecimal getPurchasePrice() {
+		return fPurchasePrice;
+	}
+	public void setPurchasePrice(BigDecimal aPurchasePrice) {
+		fPurchasePrice = aPurchasePrice;
+	}
+	public Date getPurchaseDate() {
+		return fPurchaseDate;
+	}
+	public void setPurchaseDate(Date aPurchaseDate) {
+		fPurchaseDate = aPurchaseDate;
+	}
+	public boolean isContact() {
+		return fContact;
+	}
+	public void setContact(boolean aContact) {
+		fContact = aContact;
+	} 
+	
+	
+
+}

@@ -1,0 +1,14 @@
+package io.nirozjung.bike.models;
+
+public class Bike {
+	private String fName; 
+	private String fEmail;
+	private String fPhone; 
+	private String fModel; 
+	private String fSerialNumber; 
+	private BigDecimal fPurchasePrice; 
+	private Date fPurchaseDate; 
+	private boolean fContact; 
+	
+
+}

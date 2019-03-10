@@ -1,0 +1,72 @@
+# Getting Started
+
+### Guides
+The following guides illustrates how to use certain features concretely:
+
+* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
+* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
+* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
+
+* Install SQLite3 Db 
+- MacOs User -> brew install Sqlite3
+- create new database -> sqlite3 bike.db
+- create table
+
+CREATE TABLE
+    bike
+    (
+        id BIGINT NOT NULL,
+        contact BOOLEAN NOT NULL,
+        email VARCHAR,
+        model VARCHAR,
+        name VARCHAR,
+        phone VARCHAR,
+        purchase_date DATETIME,
+        purchase_price NUMERIC,
+        serial_number VARCHAR,
+        PRIMARY KEY (id)
+    );
+
+CREATE TABLE
+    hibernate_sequence
+    (
+        next_val BIGINT
+    );
+
+INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
+  VALUES (1, 1, 'jeff@bikes.com', 'Globo MTB 29 Full Suspension', 'Jeff Miller', '328-443-5555', 4419619200000, '1100');
+INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
+  VALUES (2, 0, 'samantha@bikes.com', 'Globo Carbon Fiber Race Series', 'Samantha Davis', '448-397-5555', 4419619200000, '1999');
+INSERT INTO bike (id, contact, email, model, name, phone, purchase_date, purchase_price)
+  VALUES (3, 1, 'dave@bikes.com', 'Globo Time Trial Blade', 'Dave Warren', '563-891-5555', 4419619200000, '2100');
+
+INSERT INTO hibernate_sequence (next_val) VALUES (4);
+
+*****************************************************************
+FRONTEND
+- install node
+- install npm
+- install yarn 
+- npm install -g @angular/cli
+- ng config -g cli.packageManager yarn (USe Yarn as main dependency mgmt tool)
+- ng -v  
+- ng new bike-ui -routing (// create new Angularproject )
+
+***Wiring up Angular Frontend to Spring boot ****
+- Proxy 	
+	create proxy.conf.json file and 
+		{
+	"/server": {
+		"target": "http://localhost:8080",
+		"secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/server" : ""
+    }
+	}
+}
+** creating services for angular app
+- ng g service services/bike
+
+

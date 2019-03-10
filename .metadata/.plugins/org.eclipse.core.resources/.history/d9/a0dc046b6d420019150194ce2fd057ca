@@ -1,0 +1,5 @@
+package io.nirozjung.bike.controller;
+
+public class BikeController {
+
+}

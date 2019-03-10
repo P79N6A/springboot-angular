@@ -1,0 +1,19 @@
+package io.nirozjung.bike.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.nirozjung.bike.models.Bike;
+
+@RestController
+@RequestMapping("/api/v1/bikes")
+public class BikeController {
+	
+	public List<Bike> getBikes(){
+		return null;
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package io.nirozjung.bike.repositories;
+
+public interface BikeRepository {
+
+}
